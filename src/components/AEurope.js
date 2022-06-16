@@ -18,8 +18,10 @@
         // </svg>
 
         <svg xmlns="http://www.w3.org/2000/svg"
-        width="4.31111in" height="4.44444in"
-        viewBox="0 0 388 400" transform="translate(800,80)">
+             width="650px"
+            viewBox="-50 -400 2500 2000"
+            // style={{ position: "absolute", left: 50, top: 10 }}
+        >
   <path onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Ancient Europe"
         
         d="M 281.00,91.00

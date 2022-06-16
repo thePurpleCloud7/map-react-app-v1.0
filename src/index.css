@@ -1,4 +1,4 @@
-
+k
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,26 +7,50 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-image: url(
+    /* background-image: url(
         "./imgs/SplitBackground.png");  
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         width: 50vw;
-        height: 100vh;
+        height: 100vh; */
   }
-  #aeruope{
+
+  #ancient {
+    display:inline-block;
+    position: relative;
+    background-image: url(
+        "./imgs/UAncientBackground.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
   }
-  #meurope{
-    position: relative;
-	top: 0px;
-	left: 0px;
-    right: 100px;
+  #modern{
+    display:inline-block;
+  position: relative;
+  background-image: url(
+      "./imgs/UModernBackground.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+  #aeruope{
+    position: absolute;
+	top: -115px;
+	left: -310px;
+    right: 400px;
 	z-index: 2;
+  }
+  #meurope{
+    /* position: absolute;
+	top: -115px;
+	left: -310px;
+    right: 400px;
+	z-index: 2; */
 	/* outline: 1px dotted red; */
-	width: auto;
-	height: auto;
+	/* width: auto;
+	height: auto; */
 }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

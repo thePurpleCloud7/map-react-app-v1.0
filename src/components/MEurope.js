@@ -17,10 +17,18 @@ function MEurope({
         //     d="M49 0.5L1 120L230 114L136 73L209.5 0.5H49Z"/>
         // </svg>
 
-        <svg xmlns="http://www.w3.org/2000/svg"
-        width="500" height="500" 
-     viewBox="0 0 700 800"  >
-  <path  transform="translate(20,2.5)" onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Modern Europe"
+        <svg
+
+            xmlns="http://www.w3.org/2000/svg"
+            width="550px"
+            viewBox="380 30 1100 1100"
+            // style={{  position: "absolute"}}
+            //     top: -115px;
+            //     left: -310px;
+            //     right: 400px;
+            //     z-index: 2;}}
+        >
+  <path  onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Modern Europe"
         
         d="M 630.00,271.00
         C 630.00,271.00 641.00,266.90 641.00,266.90
