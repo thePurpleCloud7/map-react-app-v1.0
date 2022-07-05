@@ -6,28 +6,25 @@ function MChina({
     onMouseEnter,
     onMouseExit,
     selectedCountry,
-    hoveredCountry
+    hoveredCountry,
     // parameters/methods
 }) {
-
     return (
-    
-
         <svg
-
             xmlns="http://www.w3.org/2000/svg"
             width="550px"
             viewBox="380 30 1100 1100"
-            // style={{  position: "absolute"}}
-            //     top: -115px;
-            //     left: -310px;
-            //     right: 400px;
-            //     z-index: 2;}}
+            style={{ position: "absolute", left: x, top: y }}
         >
-  <path  onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Modern China"
-        
-
-        d="M 1165.00,527.00
+            <path
+                onClick={onClick}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseExit}
+                className="shape"
+                fill={selectedCountry === country ? "red" : "gray"}
+                stroke={hoveredCountry === country ? "red" : "black"}
+                id="Modern China"
+                d="M 1165.00,527.00
            C 1167.85,527.38 1174.64,528.98 1176.96,528.48
              1180.74,527.67 1190.08,513.80 1190.72,510.00
              1191.58,504.84 1186.00,500.37 1189.60,496.85
@@ -129,9 +126,9 @@ function MChina({
            C 1189.00,611.00 1177.00,619.00 1177.00,619.00
              1177.00,619.00 1179.00,626.00 1179.00,626.00
              1179.00,626.00 1193.00,624.00 1193.00,624.00
-             1185.16,620.30 1187.11,618.25 1189.00,611.00 Z" />
-</svg>
-        
-        );
+             1185.16,620.30 1187.11,618.25 1189.00,611.00 Z"
+            />
+        </svg>
+    );
 }
-export default MChina
+export default MChina;

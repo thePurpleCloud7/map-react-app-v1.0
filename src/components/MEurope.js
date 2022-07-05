@@ -6,32 +6,25 @@ function MEurope({
     onMouseEnter,
     onMouseExit,
     selectedCountry,
-    hoveredCountry
+    hoveredCountry,
     // parameters/methods
 }) {
-
     return (
-        // <svg width = "231" height= "121" viewBox = "0 0  231 121" fill = "none"  xmlns="http://www.w3.org/2000/svg">
-
-        //     <path onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} 
-        //     d="M49 0.5L1 120L230 114L136 73L209.5 0.5H49Z"/>
-        // </svg>
-
         <svg
-
             xmlns="http://www.w3.org/2000/svg"
             width="600px"
             viewBox="380 30 1100 1100"
-            style={{  position: "absolute", left: 70, top:-40}}
-            //     top: -115px;
-            //     left: -310px;
-            //     right: 400px;
-            //     z-index: 2;}}
-
+            style={{ position: "absolute", left: x, top: y }}
         >
-  <path  onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Modern Europe"
-        
-        d="M 630.00,271.00
+            <path
+                onClick={onClick}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseExit}
+                className="shape"
+                fill={selectedCountry === country ? "red" : "gray"}
+                stroke={hoveredCountry === country ? "red" : "black"}
+                id="Modern Europe"
+                d="M 630.00,271.00
         C 630.00,271.00 641.00,266.90 641.00,266.90
           651.95,264.07 660.45,265.66 670.00,271.24
           674.05,273.61 677.94,274.66 678.76,280.00
@@ -287,9 +280,9 @@ function MEurope({
         M 640.00,633.00
         C 640.00,633.00 639.00,633.00 639.00,633.00
           639.00,633.00 640.00,634.00 640.00,634.00
-          640.00,634.00 640.00,633.00 640.00,633.00 Z" />
-</svg>
-        
-        );
+          640.00,634.00 640.00,633.00 640.00,633.00 Z"
+            />
+        </svg>
+    );
 }
 export default MEurope;

@@ -1,4 +1,4 @@
- function AEurope({
+function AEurope({
     x,
     y,
     country,
@@ -6,25 +6,25 @@
     onMouseEnter,
     onMouseExit,
     selectedCountry,
-    hoveredCountry
+    hoveredCountry,
     // parameters/methods
 }) {
-
     return (
-        // <svg width = "231" height= "121" viewBox = "0 0  231 121" fill = "none"  xmlns="http://www.w3.org/2000/svg">
-
-        //     <path onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} 
-        //     d="M49 0.5L1 120L230 114L136 73L209.5 0.5H49Z"/>
-        // </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg"
-             width="650px"
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="650px"
             viewBox="-50 -400 2500 2000"
-            // style={{ position: "absolute", left: 50, top: 10 }}
+            style={{ position: "absolute", left: x, top: y }}
         >
-  <path onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Ancient Europe"
-        
-        d="M 281.00,91.00
+            <path
+                onClick={onClick}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseExit}
+                className="shape"
+                fill={selectedCountry === country ? "red" : "gray"}
+                stroke={hoveredCountry === country ? "red" : "black"}
+                id="Ancient Europe"
+                d="M 281.00,91.00
            C 294.13,93.46 316.75,110.27 317.00,125.00
              317.21,137.63 317.88,133.15 318.83,142.00
              318.83,142.00 320.00,166.00 320.00,166.00
@@ -79,9 +79,9 @@
              246.25,61.41 266.93,60.10 270.91,61.59
              270.91,61.59 277.09,65.46 277.09,65.46
              282.50,67.89 285.73,66.87 289.00,73.00
-             281.26,79.01 280.34,81.70 281.00,91.00 Z" />
-</svg>
-        
-        );
+             281.26,79.01 280.34,81.70 281.00,91.00 Z"
+            />
+        </svg>
+    );
 }
 export default AEurope;

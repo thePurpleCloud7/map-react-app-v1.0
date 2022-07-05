@@ -1,66 +1,34 @@
-
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    /* background-image: url(
-        "./imgs/SplitBackground.png");  
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 50vw;
-        height: 100vh; */
-  }
-
-  #ancient {
-    display:inline-block;
-    position: relative;
-    background-image: url(
-        "./imgs/UAncientBackground.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width:50%;
-        
-
-  }
-  #modern{
-    display:inline-block;
-  position: relative;
-  width:50%;
- background-image: url(
-      "./imgs/UModernBackground.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-   
-
 }
-  /* #aeruope{
-    position: absolute;
-	top: -115px;
-	left: -310px;
-    right: 400px;
-	z-index: 2;
-   
-  } */
-  /* #meurope{
-    position: absolute;
-    width:50%;
-	/* top: -115px;
-	left: -310px;
-    right: 400px;
-	z-index: 2; 
-	outline: 1px dotted red; 
-	
-	height: auto;}*/ 
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
+#ancient {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    min-height: 100vh;
+    background-image: url("./imgs/UAncientBackground.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#modern {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    min-height: 100vh;
+    background-image: url("./imgs/UModernBackground.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
