@@ -24,7 +24,7 @@ function MChina({
             //     right: 400px;
             //     z-index: 2;}}
         >
-  <path  onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Modern Europe"
+  <path  onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Modern China"
         
 
         d="M 1165.00,527.00

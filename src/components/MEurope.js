@@ -20,13 +20,14 @@ function MEurope({
         <svg
 
             xmlns="http://www.w3.org/2000/svg"
-            width="550px"
+            width="600px"
             viewBox="380 30 1100 1100"
-            // style={{  position: "absolute"}}
+            style={{  position: "absolute", left: 70, top:-40}}
             //     top: -115px;
             //     left: -310px;
             //     right: 400px;
             //     z-index: 2;}}
+
         >
   <path  onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit} className="shape" fill={selectedCountry === country ? "red" : "gray"} stroke={hoveredCountry === country ? "red" : "black"} id="Modern Europe"
         
