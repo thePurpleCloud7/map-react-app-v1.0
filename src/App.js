@@ -60,10 +60,6 @@ export default function App() {
                  )}
                         
         
-          
-          <AncientBG>
-            
-          </AncientBG>
         </div>
     );
 }
