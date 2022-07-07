@@ -28,22 +28,22 @@ export default function App() {
     //     { name: "china", pieces: [AChina, MChina] },
     // ];
 
-    const style = {
-        container: {
-            position: "relative",
-            width: "100vw",
-            height: "100vh",
-        },
+    // const style = {
+    //     container: {
+    //         position: "relative",
+    //         width: "100vw",
+    //         height: "100vh",
+    //     },
 
-    };
+    // };
 
     return (
-        <div style={style.container}>
-         
-          { modernCountries.map((Country, x,y, name) => {
+        <>
+         <ModernBG>
+          { modernCountries.map((Component, x,y, name) => {
     
                 return (
-                        <Country
+                        <Component
                             x={x}
                             y={y}
                             country={name}
@@ -51,7 +51,7 @@ export default function App() {
                             hoveredCountry={hoveredCountry}
                             onClick={() => setSelectedCountry(name)}
                             onMouseEnter={() => {
-                                console.log("ENTER");
+                                console.log("ENTERModern");
                                 setHoveredCountry(name);
                             }}
                             onMouseExit={() => setHoveredCountry("")}
@@ -59,7 +59,27 @@ export default function App() {
                 );}
                  )}
                         
-        
-        </div>
+        </ModernBG>
+
+        <AncientBG>
+            {ancientCountries.map((Component, x,y, name) => {
+                 return (
+                    <Component
+                        x={x}
+                        y={y}
+                        country={name}
+                        selectedCountry={selectedCountry}
+                        hoveredCountry={hoveredCountry}
+                        onClick={() => setSelectedCountry(name)}
+                        onMouseEnter={() => {
+                            console.log("ENTERAncient");
+                            setHoveredCountry(name);
+                        }}
+                        onMouseExit={() => setHoveredCountry("")}
+                    /> 
+            );
+            })}
+        </AncientBG>
+        </>
     );
 }
