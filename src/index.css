@@ -16,7 +16,7 @@ body {
         height: 100vh; */
   }
 
-  #ancient {
+  /* #ancient {
     display:inline-block;
     position: relative;
     background-image: url(
@@ -57,7 +57,7 @@ body {
 	z-index: 2; 
 	outline: 1px dotted red; 
 	
-	height: auto;}*/ 
+	height: auto;}*/  */
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

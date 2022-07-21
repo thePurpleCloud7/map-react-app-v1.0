@@ -40,7 +40,7 @@ export default function App() {
     return (
         <>
          <ModernBG>
-          { modernCountries.map((Component, x,y, name) => {
+          { modernCountries.map(({Component, x,y, name}) => {
     
                 return (
                         <Component
@@ -62,7 +62,7 @@ export default function App() {
         </ModernBG>
 
         <AncientBG>
-            {ancientCountries.map((Component, x,y, name) => {
+            {ancientCountries.map(({Component, x,y, name}) => {
                  return (
                     <Component
                         x={x}
