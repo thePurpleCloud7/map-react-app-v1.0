@@ -7,8 +7,6 @@ import ModernBG from "./components/ModernBG";
 import AncientBG from "./components/AncientBG";
 const { useState } = require("react");
 
-
-
 export default function App() {
     const [selectedCountry, setSelectedCountry] = useState("");
     const [hoveredCountry, setHoveredCountry] = useState("");
@@ -39,10 +37,9 @@ export default function App() {
 
     return (
         <>
-         <ModernBG>
-          { modernCountries.map(({Component, x,y, name}) => {
-    
-                return (
+            <ModernBG>
+                {modernCountries.map(({ Component, x, y, name }) => {
+                    return (
                         <Component
                             x={x}
                             y={y}
@@ -55,31 +52,30 @@ export default function App() {
                                 setHoveredCountry(name);
                             }}
                             onMouseExit={() => setHoveredCountry("")}
-                        /> 
-                );}
-                 )}
-                        
-        </ModernBG>
+                        />
+                    );
+                })}
+            </ModernBG>
 
-        <AncientBG>
-            {ancientCountries.map(({Component, x,y, name}) => {
-                 return (
-                    <Component
-                        x={x}
-                        y={y}
-                        country={name}
-                        selectedCountry={selectedCountry}
-                        hoveredCountry={hoveredCountry}
-                        onClick={() => setSelectedCountry(name)}
-                        onMouseEnter={() => {
-                            console.log("ENTERAncient");
-                            setHoveredCountry(name);
-                        }}
-                        onMouseExit={() => setHoveredCountry("")}
-                    /> 
-            );
-            })}
-        </AncientBG>
+            <AncientBG>
+                {ancientCountries.map(({ Component, x, y, name }) => {
+                    return (
+                        <Component
+                            x={x}
+                            y={y}
+                            country={name}
+                            selectedCountry={selectedCountry}
+                            hoveredCountry={hoveredCountry}
+                            onClick={() => setSelectedCountry(name)}
+                            onMouseEnter={() => {
+                                console.log("ENTERAncient");
+                                setHoveredCountry(name);
+                            }}
+                            onMouseExit={() => setHoveredCountry("")}
+                        />
+                    );
+                })}
+            </AncientBG>
         </>
     );
 }
