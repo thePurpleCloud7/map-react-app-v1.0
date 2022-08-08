@@ -5,12 +5,13 @@ function ModernBG({ children }) {
         <div
             style={{
                 position: "relative",
-                minHeight: "50vh",
-
+                minHeight: "75vh",
+                width:'700px',
                 backgroundImage: `url(${mBackground})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
+                display:"inline-block"
             }}
         >
             {children}

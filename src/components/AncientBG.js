@@ -1,9 +1,22 @@
 import aBackground from "../imgs/UAncientBackground.png";
 
-function AncientBG () {
+function AncientBG ({children}) {
    return (
 
-    <img src={aBackground} width="50%" style={{ display:"inline-block",  position: "relative",  zIndex:1}} />
+    <div
+            style={{
+                position: "relative",
+                minHeight: "75vh",
+                width:'710px',
+                backgroundImage: `url(${aBackground})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                display:"inline-block"
+            }}
+        >
+            {children}
+        </div>
    
    );
 }
