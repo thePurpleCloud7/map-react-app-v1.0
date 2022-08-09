@@ -1,5 +1,6 @@
 import "./index.css";
 import React from "react";
+import Label from "./components/Label"
 import MEurope from "./components/MEurope";
 import MKorea from "./components/MKorea";
 import AChina from "./components/AChina";
@@ -31,32 +32,32 @@ export default function App() {
 
     const modernCountries = [
         
-        { name: "europe", key:1, Component: MEurope, x: 47, y: 17},
-        { name: "china", key:2, Component: MChina, x: 330, y: 200 },
-        { name: "northasia", key:3, Component: MNorthAsia, x: 195, y: 15 },
-        { name: "korea", key:4, Component: MKorea, x: 491, y: 255 },
-        { name: "africa", key:5, Component: MAfrica, x: 25, y: 284 },
-        { name: "seasia", key:6, Component: MSEAsia, x: 390, y: 310 },
-        { name: "india", key:1, Component: MIndia, x: 310, y: 280 },
-        { name: "middleeast", Component: MMiddleEast, x: 185, y: 250 },
-        { name: "japan", Component: MJapan, x: 515, y: 250 },
-        { name: "centralasia", Component: MCentralAsia, x: 260, y: 200 },
+        { name: "Europe", key:1, Component: MEurope, x: 47, y: 17},
+        { name: "China", key:2, Component: MChina, x: 330, y: 200 },
+        { name: "North Asia", key:3, Component: MNorthAsia, x: 195, y: 15 },
+        { name: "Korea", key:4, Component: MKorea, x: 491, y: 255 },
+        { name: "Africa", key:5, Component: MAfrica, x: 25, y: 284 },
+        { name: "Southeast Asia", key:6, Component: MSEAsia, x: 390, y: 310 },
+        { name: "India", key:1, Component: MIndia, x: 310, y: 280 },
+        { name: "Middle East", Component: MMiddleEast, x: 185, y: 250 },
+        { name: "Japan", Component: MJapan, x: 515, y: 250 },
+        { name: "Central Asia", Component: MCentralAsia, x: 260, y: 200 },
       
 
        
     ];
 
     const ancientCountries = [
-        { name: "europe", Component: AEurope, x: 10, y: -60 },
-        { name: "africa", Component: AAfrica, x: -20, y: 180 },
-        { name: "china", Component: AChina, x: 257, y: 20 },
-        { name: "korea", Component: AKorea, x: 525, y: 68 },
-        { name: "seasia", Component: ASEAsia, x: 203, y: 315 },
-        { name: "india", Component: AIndia, x: 120, y: 165},
-        { name: "middleeast", Component: AMiddleEast, x: 104, y: 155 },
-        { name: "japan", Component: AJapan, x: 570, y: 318 },
-        { name: "centralasia", Component: ACentralAsia, x: 125, y: 53 },
-        { name: "northasia", Component: ANorthAsia, x: 290, y: 18 },
+        { name: "Europe", Component: AEurope, x: 10, y: -60 },
+        { name: "Africa", Component: AAfrica, x: -20, y: 180 },
+        { name: "China", Component: AChina, x: 257, y: 20 },
+        { name: "Korea", Component: AKorea, x: 525, y: 68 },
+        { name: "Southeast Asia", Component: ASEAsia, x: 203, y: 315 },
+        { name: "India", Component: AIndia, x: 120, y: 165},
+        { name: "Middle East", Component: AMiddleEast, x: 104, y: 155 },
+        { name: "Japan", Component: AJapan, x: 570, y: 318 },
+        { name: "Central Asia", Component: ACentralAsia, x: 125, y: 53 },
+        { name: "North Asia", Component: ANorthAsia, x: 290, y: 18 },
 
         
     ];
@@ -97,7 +98,9 @@ export default function App() {
                             hoveredCountry={hoveredCountry}
                             onClick={() =>{
                                 console.log(`Clicked: Ancient ${name}`);
-                                setSelectedCountry(name)}}
+                                setSelectedCountry(name)}
+                            
+                            }
                             onMouseEnter={() => {
                                 console.log(`Hovered: Ancient ${name}`);
                                 setHoveredCountry(name);
@@ -107,6 +110,7 @@ export default function App() {
                     );
                 })}
             </AncientBG>
+            <Label>{selectedCountry}</Label>
        </>
     );
 }

@@ -1,4 +1,4 @@
-import aBackground from "../imgs/UAncientBackground.png";
+import aBackground from "../imgs/UAncientBackgroundTwo.png";
 
 function AncientBG ({children}) {
    return (
