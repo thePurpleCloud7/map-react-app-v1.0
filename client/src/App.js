@@ -32,21 +32,29 @@ export default function App() {
     const PORT = process.env.PORT || 3002;
     const [selectedCountry, setSelectedCountry] = useState("");
     const [hoveredCountry, setHoveredCountry] = useState("");
-    function handleClick() {
-        fetch(`${URL}/click`);
+    // function handleClick() {
+    //     fetch(`${URL}/click`);
     
-       }
+    //    }
     
-       function handleClickTwo(name) {
+       function handleClick(name, type) {
            const test = {test:1};
            console.log(name);
-        fetch(`${URL}/clicktwo`,{method:"POST", headers: {
+        fetch(`${URL}/click`,{method:"POST", headers: {
             "Content-Type": "application/json", }, body:JSON.stringify({
-                test:1,
-                country: name
+                // test:1,
+                country: `${type} ${name}`
             }) });
        }
    
+       function handleHover(name, type) {
+        const test = {test:1};
+        console.log(name);
+     fetch(`${URL}/hover`,{method:"POST", headers: {
+         "Content-Type": "application/json", }, body:JSON.stringify({
+             country: `${type} ${name}`
+         }) });
+    }
 
     const modernCountries = [
         
@@ -95,12 +103,13 @@ export default function App() {
                             onClick={() => {
                                 console.log(`Clicked: Modern ${name}`);
                                 setSelectedCountry(name);
-                                handleClick(name);
-                                handleClickTwo(name);
+                                // handleClick(name);
+                                handleClick(name, "Modern");
                             }}
                             onMouseEnter={() => {
                                 console.log(`Hovered: Modern ${name}`);
                                 setHoveredCountry(name);
+                                handleHover(name, "Modern");
                             }}
                             onMouseExit={() => setHoveredCountry("")}
                         />
@@ -119,12 +128,15 @@ export default function App() {
                             hoveredCountry={hoveredCountry}
                             onClick={() =>{
                                 console.log(`Clicked: Ancient ${name}`);
-                                setSelectedCountry(name)}
-                            
+                                setSelectedCountry(name);
+                                handleClick(name, "Ancient");
+                            }
+                                
                             }
                             onMouseEnter={() => {
                                 console.log(`Hovered: Ancient ${name}`);
                                 setHoveredCountry(name);
+                                handleHover(name, "Ancient");
                             }}
                             onMouseExit={() => setHoveredCountry("")}
                         />

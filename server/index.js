@@ -30,10 +30,10 @@ app.get("/click", (req, res) => {
     logger.info("Clicked");
   });
 
-  app.post("/clicktwo", (req, res) => {
+  app.post("/click", (req, res) => {
       const user = "userOne";
       var ws = fs.createWriteStream('files/'+user+'.txt',{ flags: 'a' });
-                ws.write('On, '+ Date().toLocaleString()+req.body.country +' clicked by: ' + user+ '\n');
+                ws.write('On, '+ Date().toLocaleString()+" "+req.body.country +' clicked by: ' + user+ '\n');
                 console.log('writestream created/appended for ' + user );
                 console.log(req.body);
                 console.log(req.body.country);
@@ -41,6 +41,18 @@ app.get("/click", (req, res) => {
                 // res.send(country);
             });
 
+app.post("/hover", (req, res) => {
+      const user = "userOne";
+      var ws = fs.createWriteStream('files/'+user+'.txt',{ flags: 'a' });
+                ws.write('On, '+ Date().toLocaleString()+" "+req.body.country +' hovered over by: ' + user+ '\n');
+                console.log('writestream created/appended for ' + user );
+                console.log(req.body);
+                console.log(req.body.country);
+                res.send(user);
+                // res.send(country);
+            });
+
+  
 //PUBLIC
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
