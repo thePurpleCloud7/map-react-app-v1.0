@@ -1,6 +1,7 @@
 import "./index.css";
 import React from "react";
 import Label from "./components/Label"
+import IdInput from "./components/IdInput"
 import MEurope from "./components/MEurope";
 import MKorea from "./components/MKorea";
 import AChina from "./components/AChina";
@@ -91,6 +92,7 @@ export default function App() {
 
     return (
         <>
+            <IdInput></IdInput>
             <ModernBG  keys={modernCountries.id}>
                 {modernCountries.map(({ Component, x, y, name }) => {
                     return (
